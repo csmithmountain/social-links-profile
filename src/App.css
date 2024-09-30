@@ -1,0 +1,81 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: [first] 10% [line2] auto [line3] 10% [end];
+  grid-template-rows: 5% auto 20%;
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    ". footer .";
+  row-gap: 5%;
+}
+
+.card-container {
+  grid-area: main;
+  width: 95%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: hsl(0, 0%, 10%);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some depth */
+  place-self: center;
+}
+
+.card-container p {
+  margin-top: 25px;
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.social-links {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.social-links a {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: hsl(0, 0%, 20%);
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.social-links a:first-of-type {
+  margin-top: 25px;
+}
+
+.social-links a:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution {
+  grid-area: footer;
+  text-align: center;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.6); /* Muted text color */
+  padding: 10px 0; /* Padding for spacing */
+  place-self: center;
+}
+
+/* Style for links in the attribution */
+.attribution a {
+  color: hsl(75, 94%, 57%); /* Link color */
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
